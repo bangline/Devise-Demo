@@ -11,7 +11,7 @@ class User < ActiveRecord::Base
 
   def self.find_for_authentication(conditions={})
     conditions[:account_id] = Account.find_by_subdomain(conditions.delete(:subdomain)).id
-    super
+    super(conditions)
   end
 
 end
