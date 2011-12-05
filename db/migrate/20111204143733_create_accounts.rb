@@ -1,7 +1,7 @@
 class CreateAccounts < ActiveRecord::Migration
   def change
     create_table :accounts do |t|
-      t.string :slug
+      t.string :subdomain
 
       t.timestamps
     end
